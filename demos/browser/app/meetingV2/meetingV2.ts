@@ -37,9 +37,9 @@ import {
 
 class DemoTileOrganizer {
   // this is index instead of length
-  static MAX_TILES = 17;
-  static LOCAL_VIDEO_INDEX = 16;
-  public tiles: { [id: number]: number } = {};
+  static MAX_TILES = 21;
+  static LOCAL_VIDEO_INDEX = 20;
+  private tiles: { [id: number]: number } = {};
   public tileStates: {[id: number]: boolean } = {};
   public remoteTileCount = 0;
 
@@ -344,6 +344,9 @@ export class DemoMeetingApp implements AudioVideoObserver, DeviceChangeObserver,
     videoInputQuality.addEventListener('change', async (_ev: Event) => {
       this.log('Video input quality is changed');
       switch (videoInputQuality.value) {
+	case '180p':
+          this.audioVideo.chooseVideoInputQuality(320, 180, 15, 140);
+          break;
         case '360p':
           this.audioVideo.chooseVideoInputQuality(640, 360, 15, 600);
           break;
