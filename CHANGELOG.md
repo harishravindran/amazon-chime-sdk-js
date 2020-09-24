@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add MeetingReadinessCheckerConfiguration to allow custom configuration for meeting readiness checker
 - Create log stream before logging begins
+- Add metrics for Selenium initialization metrics for integration tests
 
 ### Changed
 - Update Travis config to improve PR build speed
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update dependencies to TypeScript 4, `ts-loader`, and modern linting
 - [Demo] Update dependencies, too.
 - Remove unnecessary startAudioPreview in meeting demo
+- Update test results to Sauce Labs before emitting CloudWatch metrics for integration tests
 
 ### Removed
 
@@ -26,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix Maven installation script
 - Fix SIP integration test
 - Fixed v1 meeting bug related to bootstrap row class
+- Make sure integration test returns FAILED if there is error
 
 ## [1.18.0] - 2020-09-22
 ### Added
